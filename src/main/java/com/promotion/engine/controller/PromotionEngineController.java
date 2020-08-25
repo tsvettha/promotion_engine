@@ -13,16 +13,16 @@ import org.springframework.web.bind.annotation.RestController;
 import com.promotion.engine.domain.Product;
 import com.promotion.engine.service.ProductService;
 
-
 @RestController
 @RequestMapping("/products")
 public class PromotionEngineController {
+
 	@Autowired
 	private ProductService productService;
 
 	@PostMapping("/price")
-	public ResponseEntity<Double> calculatePrice(@RequestBody List<Product> items) {
-		Double totalPrice = productService.calculatePrice(items);
+	public ResponseEntity<Double> calculatePrice(@RequestBody List<Product> products) {
+		Double totalPrice = productService.calculatePrice(products);
 		return new ResponseEntity<Double>(totalPrice, HttpStatus.OK);
 	}
 }

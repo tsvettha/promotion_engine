@@ -14,8 +14,6 @@ public class Product {
 	private Double offerPrice;
 	private Double totalPrice;
 	
-	
-	
 	public Product(String skuCode, Integer reqQuantity) {
 		super();
 		this.skuCode = skuCode;
@@ -51,7 +49,5 @@ public class Product {
 	public void setTotalPrice(Double totalPrice) {
 		this.totalPrice = totalPrice;
 	}
-	
-	
 	
 }
